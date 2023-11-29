@@ -1,0 +1,216 @@
+.vehicle{
+    padding: 90px 20px 0 20px;
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__subtitle{
+        color: #FFF;
+        font-size: 32px;
+        font-weight: 700;
+    }
+    &__flip-btn{
+        color: #fff;
+        font-size: 30px;
+        line-height: 30px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    &__flip-btn:hover{
+        position: relative;
+        color: $main-color;
+        transition: all 0.5s;
+    }
+    &__flip-btn:hover::after{
+        display: block;
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 3px;
+        background: $main-color;
+        border-radius: 3px;
+        transition: all 0.5;
+    }
+    &__front-container{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0.5em 0.7em;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%);
+    }
+    &__text{
+        color: #FFF;
+        font-size: 18px;
+        font-weight: 400;
+        max-width: 405px;
+        margin-top: 45px;
+    }
+}
+
+.flip {
+    position: relative;
+    flex: 0 0 calc(33.333% - 20px);
+    margin-bottom: 20px;
+    height: 370px;
+
+    > .front,
+    > .back {
+        display: block;
+        color: white;
+        transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
+        transition-duration: .5s;
+        transition-property: transform, opacity;
+        backface-visibility: hidden;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    > .front {
+        transform: rotateX(0deg);
+    }
+
+    > .back {
+        opacity: 0;
+        transform: rotateX(-180deg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 4em 2em;
+        .fa-times {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        cursor: pointer;
+        color: #fff;
+        font-size: 2rem;
+        transition: all 0.5s;
+        }
+        .fa-times:hover {
+        transform: rotate(180deg);
+        color: $main-color;
+        }
+    }
+
+    &.flipped {
+        > .front {
+        transform: rotateX(180deg);
+        }
+
+        > .back {
+        opacity: 1;
+        transform: rotateX(0deg);
+        }
+    }
+}
+
+.flip-1 > .front{
+    background: url('/src/img/vehicle-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.flip-1 > .back{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%), url('/src/img/vehicle-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.flip-2 > .front{
+    background: url('/src/img/vehicle-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.flip-2 > .back{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%), url('/src/img/vehicle-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.flip-3 > .front{
+    background: url('/src/img/vehicle-3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.flip-3 > .back{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%), url('/src/img/vehicle-3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media(max-width: 1440px) {
+    .flip {
+        flex: 0 0 calc(51% - 20px);
+    }
+}
+
+@media(max-width: 930px){
+    .vehicle__wrapper{
+        justify-content: center;
+    }
+    .flip {
+        flex: 0 0 calc(80% - 20px);
+    }
+}
+
+@media(max-width: 620px){
+    .flip {
+        flex: 0 0 calc(100% - 20px);
+    }
+}
+
+@media(max-width: 500px){
+    .flip {
+        height: 350px;
+    }
+    .vehicle__subtitle{
+        font-size: 30px;
+    }
+    .vehicle__flip-btn {
+        font-size: 30px;
+    }
+    .vehicle__text{
+        margin-top: 30px;
+    }
+}
+
+@media(max-width: 460px){
+    .vehicle__text{
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 425px){
+    .vehicle{
+        padding: 60px 20px 0 20px;
+    }
+    .flip {
+        height: 300px;
+        > .back {
+            padding: 2.5em 2em;
+        }
+    }
+    .vehicle__subtitle{
+        font-size: 25px;
+    }
+    .vehicle__flip-btn {
+        font-size: 25px;
+    }
+}
+
+@media(max-width: 425px){
+    .flip {
+        height: 280px;
+    }
+    .vehicle__text{
+        font-size: 14px;
+    }
+}

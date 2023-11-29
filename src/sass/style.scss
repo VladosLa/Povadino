@@ -1,0 +1,61 @@
+@import 'base/variables';
+@import 'base/mixins';
+@import 'blocks/nav';
+@import 'blocks/hero';
+@import 'blocks/products';
+@import 'blocks/partners';
+@import 'blocks/vehicle';
+@import 'blocks/awards';
+@import 'blocks/map';
+@import 'blocks/footer';
+
+@import 'blocks/news';
+
+@font-face {
+    font-family: Proxima Nova Condensed;
+    src: url(../fonts/proximanovacond_black.ttf) ;
+}
+
+@font-face {
+    font-family: Proxima Nova Condensed;
+    src: url(../fonts/proximanovacond_bold.ttf) ;
+}
+
+@font-face {
+    font-family: Proxima Nova Condensed;
+    src: url(../fonts/proximanovacond_regular.ttf) ;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: Proxima Nova Condensed;
+    
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 10em;
+}
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.subtitle{
+    color: #4986C7;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.text{
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
+}

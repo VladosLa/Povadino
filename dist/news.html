@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости Повадино</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css %>">
+<script defer src="bundle.js"></script><link href="main.css" rel="stylesheet"></head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav__sidebar">
+                <li class="nav__sidebar-li" id="closeburger"><a href="#" class="nav__link"><svg xmlns="http://www.w3.org/2000/svg" height="26" fill="#fff" viewBox="0 -960 960 960" width="26"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li class="nav__sidebar-li"><a href="index.html" class="nav__link">Наша продукция</a></li>
+                <li class="nav__sidebar-li"><a href="index.html" class="nav__link">Партёры</a></li>
+                <li class="nav__sidebar-li"><a href="index.html" class="nav__link">Техника</a></li>
+                <li class="nav__sidebar-li"><a href="index.html" class="nav__link">Награды</a></li>
+                <li class="nav__sidebar-li"><a href="news.html" class="nav__link">Новости Повадино<span></span></a></li>
+            </ul>
+            <ul class="nav__ul">
+                <li class="nav__li"><a href="index.html"><img src="2d5934afea4154f16eb2.svg" alt="logo" class="nav__logo"></a></li>
+                <li class="nav__li hideOnMobile"><a href="index.html" class="nav__link">Наша продукция</a></li>
+                <li class="nav__li hideOnMobile"><a href="index.html" class="nav__link">Партёры</a></li>
+                <li class="nav__li hideOnMobile"><a href="index.html" class="nav__link">Техника</a></li>
+                <li class="nav__li hideOnMobile"><a href="index.html" class="nav__link">Награды</a></li>
+                <li class="nav__li hideOnMobile"><a href="news.html" class="nav__link">Новости Повадино<span></span></a></li>
+                <li class="nav__li" id="burger"><a href="#" class="nav__link"><svg xmlns="http://www.w3.org/2000/svg" height="26" fill="#fff" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="news">
+            <div class="container">
+                <h2 class="subtitle">Новости</h2>
+                <div class="news__wrapper">
+                    <div class="news__item">
+                        <div class="news__image"><img src="d3b18308df6ecef22f01.jpg" alt=""></div>
+                        <div class="news__item-content">
+                            <h3 class="news__title">Lorem ipsum dolor.</h3>
+                            <div class="news__date">07.10.2023</div>
+                            <p class="news__text">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus..</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="news__more-wrapper">
+                    <a href="#" class="news__more">Показать ещё</a>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <img src="2d5934afea4154f16eb2.svg" alt="logo" class="footer__logo">
+                    <div class="footer__item">
+                        <h3 class="footer__subtitle">Следите за нами</h3>
+                        <ul class="socials">
+                            <li><a href="https://www.tiktok.com/@pz.povadino?_t=8hlEEZDx2rS&_r=1"><i class="fa-brands fa-tiktok"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-vk"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-telegram"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__item">
+                        <h3 class="footer__subtitle">Наши контакты</h3>
+                        <ul class="footer__contacts">
+                            <li class="footer__li"><i class="fa-solid fa-phone"></i><a href="tel:+74967961205" class="footer__link">+7 (496) 796-12-05</a></li>
+                            <li class="footer__li"><i class="fa-solid fa-envelope"></i><a href="mailto:mail@coalco-agro.ru" class="footer__link">mail@coalco-agro.ru</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="8d8edad4af52d4598f44.js"></script>
+</body>
+</html>
